@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{68EC375E-82EB-4E46-A14E-3DF6AF300999}</ProjectGuid>
+    <RootNamespace>OOPProject2</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>PioneerRobotAPI.lib;AriaDebugVC14.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Aria\ArAction.h" />
+    <ClInclude Include="Aria\ArActionAvoidFront.h" />
+    <ClInclude Include="Aria\ArActionAvoidSide.h" />
+    <ClInclude Include="Aria\ArActionBumpers.h" />
+    <ClInclude Include="Aria\ArActionColorFollow.h" />
+    <ClInclude Include="Aria\ArActionConstantVelocity.h" />
+    <ClInclude Include="Aria\ArActionDeceleratingLimiter.h" />
+    <ClInclude Include="Aria\ArActionDesired.h" />
+    <ClInclude Include="Aria\ArActionDriveDistance.h" />
+    <ClInclude Include="Aria\ArActionGoto.h" />
+    <ClInclude Include="Aria\ArActionGotoStraight.h" />
+    <ClInclude Include="Aria\ArActionGroup.h" />
+    <ClInclude Include="Aria\ArActionGroups.h" />
+    <ClInclude Include="Aria\ArActionInput.h" />
+    <ClInclude Include="Aria\ArActionIRs.h" />
+    <ClInclude Include="Aria\ArActionJoydrive.h" />
+    <ClInclude Include="Aria\ArActionKeydrive.h" />
+    <ClInclude Include="Aria\ArActionLimiterBackwards.h" />
+    <ClInclude Include="Aria\ArActionLimiterForwards.h" />
+    <ClInclude Include="Aria\ArActionLimiterRot.h" />
+    <ClInclude Include="Aria\ArActionLimiterTableSensor.h" />
+    <ClInclude Include="Aria\ArActionMovementParameters.h" />
+    <ClInclude Include="Aria\ArActionMovementParametersDebugging.h" />
+    <ClInclude Include="Aria\ArActionRatioInput.h" />
+    <ClInclude Include="Aria\ArActionRobotJoydrive.h" />
+    <ClInclude Include="Aria\ArActionStallRecover.h" />
+    <ClInclude Include="Aria\ArActionStop.h" />
+    <ClInclude Include="Aria\ArActionTriangleDriveTo.h" />
+    <ClInclude Include="Aria\ArActionTurn.h" />
+    <ClInclude Include="Aria\ArACTS.h" />
+    <ClInclude Include="Aria\ArAMPTU.h" />
+    <ClInclude Include="Aria\ArAnalogGyro.h" />
+    <ClInclude Include="Aria\ArArg.h" />
+    <ClInclude Include="Aria\ArArgumentBuilder.h" />
+    <ClInclude Include="Aria\ArArgumentParser.h" />
+    <ClInclude Include="Aria\ArASyncTask.h" />
+    <ClInclude Include="Aria\ArBasePacket.h" />
+    <ClInclude Include="Aria\ArBatteryConnector.h" />
+    <ClInclude Include="Aria\ArBatteryMTX.h" />
+    <ClInclude Include="Aria\ArBumpers.h" />
+    <ClInclude Include="Aria\ArCameraCollection.h" />
+    <ClInclude Include="Aria\ArCameraCommands.h" />
+    <ClInclude Include="Aria\ArCommands.h" />
+    <ClInclude Include="Aria\ArCondition.h" />
+    <ClInclude Include="Aria\ArConfig.h" />
+    <ClInclude Include="Aria\ArConfigArg.h" />
+    <ClInclude Include="Aria\ArConfigGroup.h" />
+    <ClInclude Include="Aria\ArDataLogger.h" />
+    <ClInclude Include="Aria\ArDeviceConnection.h" />
+    <ClInclude Include="Aria\ArDPPTU.h" />
+    <ClInclude Include="Aria\ArDrawingData.h" />
+    <ClInclude Include="Aria\ArExitErrorSource.h" />
+    <ClInclude Include="Aria\ArExport.h" />
+    <ClInclude Include="Aria\ArFileDeviceConnection.h" />
+    <ClInclude Include="Aria\ArFileParser.h" />
+    <ClInclude Include="Aria\ArForbiddenRangeDevice.h" />
+    <ClInclude Include="Aria\ArFunctor.h" />
+    <ClInclude Include="Aria\ArFunctorASyncTask.h" />
+    <ClInclude Include="Aria\ArGPS.h" />
+    <ClInclude Include="Aria\ArGPSConnector.h" />
+    <ClInclude Include="Aria\ArGPSCoords.h" />
+    <ClInclude Include="Aria\ArGripper.h" />
+    <ClInclude Include="Aria\ArHasFileName.h" />
+    <ClInclude Include="Aria\Aria.h" />
+    <ClInclude Include="Aria\ariaInternal.h" />
+    <ClInclude Include="Aria\ariaOSDef.h" />
+    <ClInclude Include="Aria\ariaTypedefs.h" />
+    <ClInclude Include="Aria\ariaUtil.h" />
+    <ClInclude Include="Aria\ArInterpolation.h" />
+    <ClInclude Include="Aria\ArIrrfDevice.h" />
+    <ClInclude Include="Aria\ArIRs.h" />
+    <ClInclude Include="Aria\ArJoyHandler.h" />
+    <ClInclude Include="Aria\ArKeyHandler.h" />
+    <ClInclude Include="Aria\ArLaser.h" />
+    <ClInclude Include="Aria\ArLaserConnector.h" />
+    <ClInclude Include="Aria\ArLaserFilter.h" />
+    <ClInclude Include="Aria\ArLaserLogger.h" />
+    <ClInclude Include="Aria\ArLaserReflectorDevice.h" />
+    <ClInclude Include="Aria\ArLCDConnector.h" />
+    <ClInclude Include="Aria\ArLCDMTX.h" />
+    <ClInclude Include="Aria\ArLineFinder.h" />
+    <ClInclude Include="Aria\ArLMS1XX.h" />
+    <ClInclude Include="Aria\ArLMS2xx.h" />
+    <ClInclude Include="Aria\ArLMS2xxPacket.h" />
+    <ClInclude Include="Aria\ArLMS2xxPacketReceiver.h" />
+    <ClInclude Include="Aria\ArLog.h" />
+    <ClInclude Include="Aria\ArLogFileConnection.h" />
+    <ClInclude Include="Aria\ArMap.h" />
+    <ClInclude Include="Aria\ArMapComponents.h" />
+    <ClInclude Include="Aria\ArMapInterface.h" />
+    <ClInclude Include="Aria\ArMapObject.h" />
+    <ClInclude Include="Aria\ArMapUtils.h" />
+    <ClInclude Include="Aria\ArMD5Calculator.h" />
+    <ClInclude Include="Aria\ArMode.h" />
+    <ClInclude Include="Aria\ArModes.h" />
+    <ClInclude Include="Aria\ArModule.h" />
+    <ClInclude Include="Aria\ArModuleLoader.h" />
+    <ClInclude Include="Aria\ArMTXIO.h" />
+    <ClInclude Include="Aria\ArMutex.h" />
+    <ClInclude Include="Aria\ArNetServer.h" />
+    <ClInclude Include="Aria\ArNMEAParser.h" />
+    <ClInclude Include="Aria\ArNovatelGPS.h" />
+    <ClInclude Include="Aria\ArP2Arm.h" />
+    <ClInclude Include="Aria\ArPixelDevice.h" />
+    <ClInclude Include="Aria\ArPriorityResolver.h" />
+    <ClInclude Include="Aria\ArPTZ.h" />
+    <ClInclude Include="Aria\ArPTZConnector.h" />
+    <ClInclude Include="Aria\ArRangeBuffer.h" />
+    <ClInclude Include="Aria\ArRangeDevice.h" />
+    <ClInclude Include="Aria\ArRangeDeviceThreaded.h" />
+    <ClInclude Include="Aria\ArRatioInputJoydrive.h" />
+    <ClInclude Include="Aria\ArRatioInputKeydrive.h" />
+    <ClInclude Include="Aria\ArRatioInputRobotJoydrive.h" />
+    <ClInclude Include="Aria\ArRecurrentTask.h" />
+    <ClInclude Include="Aria\ArResolver.h" />
+    <ClInclude Include="Aria\ArRingQueue.h" />
+    <ClInclude Include="Aria\ArRobot.h" />
+    <ClInclude Include="Aria\ArRobotBatteryPacketReader.h" />
+    <ClInclude Include="Aria\ArRobotConfig.h" />
+    <ClInclude Include="Aria\ArRobotConfigPacketReader.h" />
+    <ClInclude Include="Aria\ArRobotConnector.h" />
+    <ClInclude Include="Aria\ArRobotJoyHandler.h" />
+    <ClInclude Include="Aria\ArRobotPacket.h" />
+    <ClInclude Include="Aria\ArRobotPacketReaderThread.h" />
+    <ClInclude Include="Aria\ArRobotPacketReceiver.h" />
+    <ClInclude Include="Aria\ArRobotPacketSender.h" />
+    <ClInclude Include="Aria\ArRobotParams.h" />
+    <ClInclude Include="Aria\ArRobotTypes.h" />
+    <ClInclude Include="Aria\ArRVisionPTZ.h" />
+    <ClInclude Include="Aria\ArS3Series.h" />
+    <ClInclude Include="Aria\ArSensorReading.h" />
+    <ClInclude Include="Aria\ArSerialConnection.h" />
+    <ClInclude Include="Aria\ArSick.h" />
+    <ClInclude Include="Aria\ArSignalHandler.h" />
+    <ClInclude Include="Aria\ArSimpleConnector.h" />
+    <ClInclude Include="Aria\ArSimulatedLaser.h" />
+    <ClInclude Include="Aria\ArSocket.h" />
+    <ClInclude Include="Aria\ArSonarAutoDisabler.h" />
+    <ClInclude Include="Aria\ArSonarConnector.h" />
+    <ClInclude Include="Aria\ArSonarDevice.h" />
+    <ClInclude Include="Aria\ArSonarMTX.h" />
+    <ClInclude Include="Aria\ArSonyPTZ.h" />
+    <ClInclude Include="Aria\ArSoundPlayer.h" />
+    <ClInclude Include="Aria\ArSoundsQueue.h" />
+    <ClInclude Include="Aria\ArSpeech.h" />
+    <ClInclude Include="Aria\ArStringInfoGroup.h" />
+    <ClInclude Include="Aria\ArSyncLoop.h" />
+    <ClInclude Include="Aria\ArSyncTask.h" />
+    <ClInclude Include="Aria\ArSystemStatus.h" />
+    <ClInclude Include="Aria\ArSZSeries.h" />
+    <ClInclude Include="Aria\ArTaskState.h" />
+    <ClInclude Include="Aria\ArTCM2.h" />
+    <ClInclude Include="Aria\ArTCMCompassDirect.h" />
+    <ClInclude Include="Aria\ArTCMCompassRobot.h" />
+    <ClInclude Include="Aria\ArTcpConnection.h" />
+    <ClInclude Include="Aria\ArThread.h" />
+    <ClInclude Include="Aria\ArTransform.h" />
+    <ClInclude Include="Aria\ArTrimbleGPS.h" />
+    <ClInclude Include="Aria\ArUrg.h" />
+    <ClInclude Include="Aria\ArUrg_2_0.h" />
+    <ClInclude Include="Aria\ArVCC4.h" />
+    <ClInclude Include="Aria\ArVersalogicIO.h" />
+    <ClInclude Include="Aria\ArZippable.h" />
+    <ClInclude Include="Aria\md5.h" />
+    <ClInclude Include="Aria\wrapper_ExtraClasses.h" />
+    <ClInclude Include="Aria\wrapper_Functors.h" />
+    <ClInclude Include="Encryption.h" />
+    <ClInclude Include="LaserSensor.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="Path.h" />
+    <ClInclude Include="PioneerRobotAPI.h" />
+    <ClInclude Include="PioneerRobotInterface.h" />
+    <ClInclude Include="Pose.h" />
+    <ClInclude Include="RangeSensor.h" />
+    <ClInclude Include="Record.h" />
+    <ClInclude Include="RobotControl.h" />
+    <ClInclude Include="RobotInterface.h" />
+    <ClInclude Include="RobotOperator.h" />
+    <ClInclude Include="SonarSensor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AriaDebugVC14.dll" />
+    <None Include="Aria\wrapper.i" />
+    <None Include="Aria\wrapper_std_list_java.i" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="AriaDebugVC14.lib" />
+    <Library Include="PioneerRobotAPI.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Encryption.cpp" />
+    <ClCompile Include="LaserSensor.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="MenuTest.cpp" />
+    <ClCompile Include="Path.cpp" />
+    <ClCompile Include="PioneerRobotInterface.cpp" />
+    <ClCompile Include="Pose.cpp" />
+    <ClCompile Include="Record.cpp" />
+    <ClCompile Include="RobotControl.cpp" />
+    <ClCompile Include="RobotInterface.cpp" />
+    <ClCompile Include="RobotOperator.cpp" />
+    <ClCompile Include="SonarSensor.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
